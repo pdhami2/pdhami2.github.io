@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Your Name · Data Science & Product</title>
+<meta name="description" content="Analytics engineer turned data scientist, now working at the intersection of product management and data science.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F5F7FA;
+  --card:#FFFFFF;
+  --ink:#14213D;
+  --muted:#5B6B82;
+  --rule:#D9E0EA;
+  --accent:#0E7C7B;
+  --accent-soft:#DDF0EE;
+  --sans:"Schibsted Grotesk",system-ui,sans-serif;
+  --serif:"Source Serif 4",Georgia,serif;
+  --wrap:960px;
+}
+@media (prefers-color-scheme:dark){
+  :root{--paper:#0F1726;--card:#16213A;--ink:#E7ECF4;--muted:#9AA8BE;--rule:#26334F;--accent:#4FC1BC;--accent-soft:#163A44;}
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.6}
+a{color:var(--accent)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 24px}
+
+/* nav */
+header.nav{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--paper) 92%,transparent);backdrop-filter:saturate(1.2) blur(6px);border-bottom:1px solid var(--rule)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.nav .name{font-weight:700;text-decoration:none;color:var(--ink);letter-spacing:-.01em}
+.nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0}
+.nav ul a{color:var(--muted);text-decoration:none;font-size:15px}
+.nav ul a:hover,.nav ul a[aria-current]{color:var(--ink)}
+.lock{display:inline-block;width:11px;height:11px;margin-left:4px;vertical-align:-1px}
+
+/* intro */
+.intro{padding:80px 0 56px}
+.intro h1{font-size:clamp(38px,6vw,60px);line-height:1.05;letter-spacing:-.025em;margin:0 0 20px;font-weight:700;max-width:14ch}
+.intro .lede{font-family:var(--serif);font-size:20px;line-height:1.65;color:var(--ink);max-width:60ch;margin:0 0 28px}
+.actions{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.btn{font:500 15px var(--sans);padding:11px 18px;border-radius:8px;border:1px solid var(--ink);background:var(--ink);color:var(--paper);cursor:pointer;text-decoration:none}
+.btn.ghost{background:transparent;color:var(--ink);border-color:var(--rule)}
+.btn.ghost:hover{border-color:var(--ink)}
+.contact-inline{display:flex;gap:16px;margin-left:8px;font-size:15px}
+.contact-inline a{color:var(--muted)}
+
+/* career lineage: the signature element */
+.arc{padding:24px 0 72px}
+.arc h2,.section h2{font-size:15px;font-weight:500;color:var(--muted);margin:0 0 20px}
+.lineage{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;list-style:none;margin:0;padding:0;position:relative}
+.stage{position:relative;background:var(--card);border:1px solid var(--rule);border-radius:10px;padding:22px 22px 20px}
+.stage:not(:last-child)::after{content:"";position:absolute;top:38px;right:-41px;width:40px;height:2px;background:var(--rule)}
+.stage:not(:last-child)::before{content:"";position:absolute;top:34px;right:-42px;border:5px solid transparent;border-left:7px solid var(--muted);border-right:0}
+.stage .node{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.stage .dot{width:14px;height:14px;border-radius:50%;border:2px solid var(--muted);background:var(--card);flex:none}
+.stage h3{margin:0;font-size:19px;letter-spacing:-.01em}
+.stage .when{font-family:var(--sans);font-size:14px;color:var(--muted);margin:0 0 10px}
+.stage p{margin:0;font-family:var(--serif);font-size:16px;line-height:1.55}
+.stage .carry{font-family:var(--sans);margin-top:14px;padding-top:12px;border-top:1px dashed var(--rule);font-size:14px;color:var(--muted)}
+.stage.now{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
+.stage.now .dot{border-color:var(--accent);background:var(--accent)}
+.stage.now .when{color:var(--accent);font-weight:500}
+
+/* resume sections */
+.section{padding:56px 0;border-top:1px solid var(--rule)}
+.section .grid{display:grid;grid-template-columns:200px 1fr;gap:32px}
+.job{display:grid;align-items:baseline;grid-template-columns:1fr auto;gap:2px 16px;padding:0 0 32px}
+.job:last-child{padding-bottom:0}
+.job h3{margin:0;font-size:19px;letter-spacing:-.01em}
+.job .org{color:var(--muted);margin:0}
+.job .dates{color:var(--muted);font-size:15px;white-space:nowrap;grid-row:1;grid-column:2}
+.job ul{grid-column:1/-1;margin:12px 0 0;padding-left:20px;font-family:var(--serif);font-size:16.5px;max-width:68ch}
+.job li{margin-bottom:6px}
+.skills{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.skills h3{font-size:16px;margin:0 0 10px}
+.tags{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:0;padding:0}
+.tags li{font-size:14px;padding:4px 10px;border-radius:6px;background:var(--card);border:1px solid var(--rule)}
+.edu p{margin:0}
+.edu .org{color:var(--muted)}
+footer{padding:48px 0 64px;border-top:1px solid var(--rule);color:var(--muted);font-size:15px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:20px;justify-content:space-between}
+.ph{background:var(--accent-soft);border-radius:3px;padding:0 3px}
+
+/* mobile */
+@media (max-width:760px){
+  .nav ul{gap:14px}
+  .nav ul li.hide-sm{display:none}
+  .intro{padding:48px 0 40px}
+  .lineage{grid-template-columns:1fr;gap:28px}
+  .stage:not(:last-child)::after{top:auto;bottom:-29px;right:auto;left:28px;width:2px;height:28px}
+  .stage:not(:last-child)::before{top:auto;bottom:-30px;right:auto;left:24px;border:5px solid transparent;border-top:7px solid var(--muted);border-bottom:0}
+  .section .grid{grid-template-columns:1fr;gap:12px}
+  .skills{grid-template-columns:1fr}
+  .contact-inline{margin-left:0;width:100%}
+}
+
+/* print = PDF resume */
+@media print{
+  :root{--paper:#fff;--card:#fff;--ink:#000;--muted:#444;--rule:#ccc;--accent:#000;--accent-soft:#fff}
+  body{font-size:11pt}
+  header.nav,.actions .btn,footer .site-only{display:none}
+  .intro{padding:0 0 12pt}
+  .intro h1{font-size:24pt;max-width:none}
+  .intro .lede{font-size:11pt}
+  .arc,.section{padding:12pt 0;break-inside:avoid-page}
+  .stage{box-shadow:none!important;padding:8pt}
+  .job{break-inside:avoid}
+  a{color:#000;text-decoration:none}
+  .ph{background:none;padding:0}
+}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="name" href="#top">Your Name</a>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="#top" aria-current="page">About</a></li>
+        <li><a href="#experience">Resume</a></li>
+        <li><a href="/projects/">Projects<svg class="lock" viewBox="0 0 12 12" aria-label="Password protected"><rect x="2" y="5.5" width="8" height="5.5" rx="1" fill="currentColor"/><path d="M4 5.5V4a2 2 0 0 1 4 0v1.5" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></a></li>
+        <li class="hide-sm"><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="top" class="wrap">
+
+  <section class="intro">
+    <h1>Product decisions, built on data I understand end to end.</h1>
+    <p class="lede">I started as an analytics engineer, building the pipelines and models that teams relied on for their numbers. That foundation pulled me into data science, where I moved from making data reliable to making it predictive. Today I work where product management and data science meet: deciding what to build, and measuring whether it worked.</p>
+    <div class="actions">
+      <button class="btn" type="button" onclick="window.print()">Download resume (PDF)</button>
+      <a class="btn ghost" href="#contact">Get in touch</a>
+      <span class="contact-inline">
+        <a href="https://www.linkedin.com/in/your-handle">LinkedIn</a>
+        <a href="https://github.com/your-handle">GitHub</a>
+      </span>
+    </div>
+  </section>
+
+  <section class="arc" aria-labelledby="arc-h">
+    <h2 id="arc-h">How I got here</h2>
+    <ol class="lineage">
+      <li class="stage">
+        <div class="node"><span class="dot" aria-hidden="true"></span><h3>Analytics engineer</h3></div>
+        <p class="when"><span class="ph">20XX–20XX</span> · <span class="ph">Company</span></p>
+        <p>Built the data foundations: pipelines, warehouse models and metric definitions teams could trust.</p>
+        <p class="carry">Carried forward: how data is actually made, and where it breaks.</p>
+      </li>
+      <li class="stage">
+        <div class="node"><span class="dot" aria-hidden="true"></span><h3>Data scientist</h3></div>
+        <p class="when"><span class="ph">20XX–20XX</span> · <span class="ph">Company</span></p>
+        <p>Turned that data into models, experiments and analyses that shaped decisions.</p>
+        <p class="carry">Carried forward: experimentation, modeling, and telling signal from noise.</p>
+      </li>
+      <li class="stage now">
+        <div class="node"><span class="dot" aria-hidden="true"></span><h3>Product + data science</h3></div>
+        <p class="when">Now · <span class="ph">Company</span></p>
+        <p>Shaping what gets built, with the metrics and models to know whether it worked.</p>
+        <p class="carry">Bringing it together: from raw tables to roadmap.</p>
+      </li>
+    </ol>
+  </section>
+
+  <section class="section" id="experience" aria-labelledby="exp-h">
+    <div class="grid">
+      <h2 id="exp-h">Experience</h2>
+      <div>
+        <article class="job">
+          <h3>Product Manager, Data Science</h3>
+          <p class="dates"><span class="ph">20XX</span> – Present</p>
+          <p class="org"><span class="ph">Company</span> · <span class="ph">City</span></p>
+          <ul>
+            <li><span class="ph">Led roadmap for X, defining success metrics and launch criteria with engineering and design.</span></li>
+            <li><span class="ph">Ran experiments on Y that moved Z metric by N%.</span></li>
+            <li><span class="ph">Translated model capabilities into product requirements for W.</span></li>
+          </ul>
+        </article>
+        <article class="job">
+          <h3>Data Scientist</h3>
+          <p class="dates"><span class="ph">20XX – 20XX</span></p>
+          <p class="org"><span class="ph">Company</span> · <span class="ph">City</span></p>
+          <ul>
+            <li><span class="ph">Built and deployed a model for X, improving Y by N%.</span></li>
+            <li><span class="ph">Designed and analyzed A/B tests for Z product area.</span></li>
+            <li><span class="ph">Partnered with product teams to define and track key metrics.</span></li>
+          </ul>
+        </article>
+        <article class="job">
+          <h3>Analytics Engineer</h3>
+          <p class="dates"><span class="ph">20XX – 20XX</span></p>
+          <p class="org"><span class="ph">Company</span> · <span class="ph">City</span></p>
+          <ul>
+            <li><span class="ph">Built and maintained data models in dbt powering company dashboards.</span></li>
+            <li><span class="ph">Defined core business metrics and a shared semantic layer.</span></li>
+            <li><span class="ph">Reduced pipeline failures / report latency by N%.</span></li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="skills-h">
+    <div class="grid">
+      <h2 id="skills-h">Skills</h2>
+      <div class="skills">
+        <div>
+          <h3>Data engineering</h3>
+          <ul class="tags"><li>SQL</li><li>dbt</li><li>Snowflake</li><li>Airflow</li></ul>
+        </div>
+        <div>
+          <h3>Data science</h3>
+          <ul class="tags"><li>Python</li><li>Machine learning</li><li>Experimentation</li><li>Statistics</li></ul>
+        </div>
+        <div>
+          <h3>Product</h3>
+          <ul class="tags"><li>Roadmapping</li><li>Metrics design</li><li>Stakeholder alignment</li><li>PRDs</li></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section edu" aria-labelledby="edu-h">
+    <div class="grid">
+      <h2 id="edu-h">Education</h2>
+      <div>
+        <p><strong><span class="ph">Degree, Field</span></strong></p>
+        <p class="org"><span class="ph">University</span> · <span class="ph">20XX</span></p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer id="contact">
+  <div class="wrap">
+    <span>Your Name · <a href="mailto:you@example.com">you@example.com</a></span>
+    <span class="site-only"><a href="https://www.linkedin.com/in/your-handle">LinkedIn</a> · <a href="https://github.com/your-handle">GitHub</a></span>
+  </div>
+</footer>
+
+</body>
+</html>
