@@ -54,8 +54,6 @@ header.nav{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--p
 .btn{font:500 15px var(--sans);padding:11px 18px;border-radius:8px;border:1px solid var(--ink);background:var(--ink);color:var(--paper);cursor:pointer;text-decoration:none}
 .btn.ghost{background:transparent;color:var(--ink);border-color:var(--rule)}
 .btn.ghost:hover{border-color:var(--ink)}
-.contact-inline{display:flex;gap:16px;margin-left:8px;font-size:15px}
-.contact-inline a{color:var(--muted)}
 
 /* section labels */
 .label{font-size:15px;font-weight:500;color:var(--muted);margin:0 0 20px}
@@ -121,7 +119,6 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:20px;justify-content:space-between}
   .section .grid{grid-template-columns:1fr;gap:4px}
   .highlights,.skills{grid-template-columns:1fr}
   .chapter p{font-size:17px}
-  .contact-inline{margin-left:0;width:100%}
 }
 </style>
 </head>
@@ -149,10 +146,6 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:20px;justify-content:space-between}
     <p class="lede">I started as an analytics and software engineer, building the data foundations teams relied on. Today I work where product, data science and AI meet: deciding what to build, and measuring whether it worked.</p>
     <div class="actions">
       <a class="btn" href="#contact">Get in touch</a>
-      <span class="contact-inline">
-        <a href="https://www.linkedin.com/in/priyanka-dhamija/">LinkedIn</a>
-        <a href="https://github.com/pdhami2">GitHub</a>
-      </span>
     </div>
     </div>
     <figure class="portrait">
@@ -210,7 +203,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:20px;justify-content:space-between}
         <li><strong>Self-serve analytics for ~100 people</strong><span>Turned ad hoc data requests into a self-serve product, cutting time to retrieve data by ~40%.</span><ul class="tags mini" aria-label="Built with"><li class="key">dbt</li><li>Snowflake</li><li>Airflow</li></ul></li>
         <li><strong>Metrics the board reviews</strong><span>Defined company KPIs with four business functions, used in leadership and funding meetings.</span></li>
         <li><strong>Agentforce product bundle measurement</strong><span>Measured adoption of the Agentforce bundle and recommended changes that lift attach rate by ~70% for one of its most used features.</span></li>
-        <li><strong>Expense tracker product</strong><span>Built a tracker with Claude that turns 12 months of receipts from 10+ stores into monthly grocery and retail lists, with recommendations based on my shopping patterns. A local, read-only MCP server brings those lists into the Claude desktop app without exposing spending data.</span><ul class="tags mini" aria-label="Built with"><li class="key">Claude Code</li><li>MCP</li><li>Python</li><li>SQLite</li></ul></li>
+        <li><strong>Expense tracker product</strong><span>Turns 12 months of receipts from 10+ stores into personalized monthly shopping recommendations based on my buying patterns, served to Claude through a private, read-only MCP server.</span><ul class="tags mini" aria-label="Built with"><li class="key">Claude Code</li><li>MCP</li><li>Python</li><li>SQLite</li></ul></li>
       </ul>
     </div>
   </section>
